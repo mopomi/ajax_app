@@ -1,0 +1,20 @@
+<h1>Top page</h1>
+<%= link_to '新規投稿', '/keijiban/new' %>
+<% @all_data.each do |data| %>
+  <div class="data">
+    <div class="data-date">
+      投稿日時：<%= data.created_at %>
+    </div>
+    <div class="data-content">
+      <%= data.content %>
+    </div>
+  </div>
+<% end %>
+
+
+
+
+prefecture = ['北海道', '青森', '...(省略)...', '沖縄']
+
+def select_prefecture(prefecture, category)
+num = gets.to_i
