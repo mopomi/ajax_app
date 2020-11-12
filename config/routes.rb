@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'keijiban', to: 'posts#index'
-  get 'keijiban/new', to: 'posts#new'
-  post 'keijiban', to: 'posts#create'
+  root to: 'posts#index'
+  post 'posts', to: 'posts#create'
 end
